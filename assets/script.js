@@ -15,10 +15,10 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
+  //I added my first prompt: the length of the password
   var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long");
 
-  
-
+  //then I have to make an if statement. If cancel, then the function ends
 
 
 
