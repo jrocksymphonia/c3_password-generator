@@ -15,7 +15,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-
+  window.prompt("Set character length of password. It can be 8-128 characters long");
 
 
 
