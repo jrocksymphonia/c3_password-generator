@@ -17,13 +17,24 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   //I added my first prompt: the length of the password
   var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
+  var numberInput = i
 
-  //then I have to make an if statement. If cancel, then the function ends
+  //I entered a forLoop of the numberInput so the input in the prompt can range from 8-128
+  for (var i = 0; i >= 7 >= 127; i++)
+
+  //then I have to make an if statement: 
+  //If number input less than 8, more that 128, or any other character,
+  // show alert box saying wrong input, then run the code again.
+
+  //If `OK`, continue to confirm box series. 
+  //Else `CANCEL`, then the function ends
+
 
 
   //My next couple messsages are going to be confirm boxes
   //This is the lowercase option
   var lowerCase = window.confirm("Do you want lowercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
+
 
 
   //This is the uppercase option
