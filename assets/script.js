@@ -15,6 +15,7 @@
 var generateBtn = document.querySelector("#generate");
 
 //correct answers that the computer has to log
+var lowercaseText = "abcdefghijklmnopqrstuvwxyz"
 
 function generatePassword() {
   //I added my first prompt: the length of the password
