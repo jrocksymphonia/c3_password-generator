@@ -16,12 +16,26 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   //I added my first prompt: the length of the password
-  var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long");
+  var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
 
   //then I have to make an if statement. If cancel, then the function ends
 
 
+  //My next couple messsages are going to be confirm boxes
+  //
+  var lowerCase = window.confirm("Do you want lowercase letters in your password? Click `OK` to confirm, `CANCEL` to deny.")
 
+
+
+  var upperCase = window.confirm("Do you want uppercase letters in your password? Click `OK` to confirm, `CANCEL` to deny.")
+
+
+
+  var numbers = window.confirm("Do you want numbers in your password? Click `OK` to confirm, `CANCEL` to deny.")
+
+
+
+  var specialCharacters = window.confirm("Do you want special characters in your password? Click `OK` to confirm, `CANCEL` to deny.")
 
 
 }
