@@ -14,11 +14,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//correct answers that the computer has to log
+//characters that the computer can choose from
 var lowercaseText = "abcdefghijklmnopqrstuvwxyz"
 var uppercaseText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numberText = "0123456789"
-var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~" //characters that dont work well are " and \
 
 function generatePassword() {
   //I added my first prompt: the length of the password
