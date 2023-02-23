@@ -102,7 +102,7 @@ function generatePassword() {
   // out of 120 character lengths, you get 14 options for each length
   //(lowercase = LC, uppercase = UC, number = N, special characters = SC):
   //if user only chooses 1 of 4 options:
-  // -LC , 
+  // -LC 
   // -UC
   // -N
   // -SC
