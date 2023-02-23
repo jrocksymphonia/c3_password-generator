@@ -22,11 +22,15 @@ var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~" //characters that d
 
 function generatePassword() {
   //I added my first prompt: the length of the password
-  var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
+  var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.", numberInput);
+  
+  
   var numberInput = i
 
   //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
-  for (var i = 0; i >= 7; i++) //OMG I NEVER COMPLETED THE forLoop LOL
+  for (var i = 0; i >= 7; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
+    numberInput
+  }
 
 
   //If they `CANCEL` here, then the function ends
@@ -61,6 +65,35 @@ function generatePassword() {
 
   //This is the special character option
   var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
+
+
+
+//Answer options:
+// out of 120 character lengths, you get 14 options for each length
+//(lowercase = LC, uppercase = UC, number = N, special characters = SC):
+//if user only chooses 1 of 4 options:
+// -LC
+// -UC
+// -N
+// -SC
+
+//if user chooses 2 of 4 options:
+// -LC + UC
+// -LC + N
+// -LC + SC
+// -UC + N
+// -UC + SC
+// -N + SC
+
+//if user chooses 3 of 4 options:
+// -LC + UC + N
+// -LC + N + SC
+// -UC + N + SC
+
+//if user chooses 4 of 4 options:
+// -LC + UC + N + SC
+
+
 
 
 }
