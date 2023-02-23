@@ -14,26 +14,26 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//correct answers that the computer has to log
+
 function generatePassword() {
   //I added my first prompt: the length of the password
   var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
   var numberInput = i
 
-  //I entered a forLoop of the numberInput so the input in the prompt can range from 8-128
-  for (var i = 0; i >= 7 >= 127; i++)
+  //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
+  for (var i = 0; i >= 7; i++)
 
 
-  //If `OK`, continue to confirm box series. 
-  //Else `CANCEL`, then the function ends
-
-
+  //If they `CANCEL` here, then the function ends
+  if(!passwordLength) {
+    return;
+  }
   //then I have to make an if statement: 
   //If number input less than 8, more that 128, or any other character,
   // show alert box saying wrong input, then run the code again.
-  if(numberInput === i) {
-
-  } else {
-
+  if (!numberInput) {
+    window.alert("You must enter a number between 8 and 128")
   }
 
   
