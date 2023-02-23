@@ -31,10 +31,11 @@ function generatePassword() {
   }
   //then I have to make an if statement: 
   //If number input less than 8, more that 128, or any other character,
-  // show alert box saying wrong input, then run the code again.
-  if (!numberInput) {
-    window.alert("You must enter a number between 8 and 128")
-  }
+  // then show alert box saying wrong input, then run the code again.
+  // if (!numberInput) {
+  //   window.alert("You must enter a number between 8 and 128");
+  //   passwordLength
+  // }
 
   
 
