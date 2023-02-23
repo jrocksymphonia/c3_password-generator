@@ -1,5 +1,3 @@
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
 
 // WHEN prompted for password criteria
 // THEN I select which criteria to include in the password
@@ -15,10 +13,13 @@
 var generateBtn = document.querySelector("#generate");
 
 //characters that the computer can choose from
-var lowercaseText = "abcdefghijklmnopqrstuvwxyz"
-var uppercaseText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var numberText = "0123456789"
-var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~" //characters that dont work well are " and \
+var lowercaseText = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberText = "0123456789";
+var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that dont work well are " and \
+
+//made an array of the variables above
+var characterType = [lowercaseText, uppercaseText, numberText, specialCharacterText];
 
 function generatePassword() {
   //I added my first prompt: the length of the password
@@ -51,47 +52,47 @@ function generatePassword() {
 
   //My next couple messsages are going to be confirm boxes
   //This is the lowercase option
-  var lowerCase = window.confirm("Do you want lowercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
+  var lowerCase = window.confirm("Do you want lowercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
 
 
   //This is the uppercase option
-  var upperCase = window.confirm("Do you want uppercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
+  var upperCase = window.confirm("Do you want uppercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
 
   //This is the number option
-  var numbers = window.confirm("Do you want numbers in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
+  var numbers = window.confirm("Do you want numbers in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
 
   //This is the special character option
-  var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
+  var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
 
 
-//Answer options:
-// out of 120 character lengths, you get 14 options for each length
-//(lowercase = LC, uppercase = UC, number = N, special characters = SC):
-//if user only chooses 1 of 4 options:
-// -LC
-// -UC
-// -N
-// -SC
+  //Answer options:
+  // out of 120 character lengths, you get 14 options for each length
+  //(lowercase = LC, uppercase = UC, number = N, special characters = SC):
+  //if user only chooses 1 of 4 options:
+  // -LC , 
+  // -UC
+  // -N
+  // -SC
 
-//if user chooses 2 of 4 options:
-// -LC + UC
-// -LC + N
-// -LC + SC
-// -UC + N
-// -UC + SC
-// -N + SC
+  //if user chooses 2 of 4 options:
+  // -LC + UC
+  // -LC + N
+  // -LC + SC
+  // -UC + N
+  // -UC + SC
+  // -N + SC
 
-//if user chooses 3 of 4 options:
-// -LC + UC + N
-// -LC + N + SC
-// -UC + N + SC
+  //if user chooses 3 of 4 options:
+  // -LC + UC + N
+  // -LC + N + SC
+  // -UC + N + SC
 
-//if user chooses 4 of 4 options:
-// -LC + UC + N + SC
+  //if user chooses 4 of 4 options:
+  // -LC + UC + N + SC
 
 
 
