@@ -22,20 +22,20 @@ function generatePassword() {
 
 
   //My next couple messsages are going to be confirm boxes
-  //
-  var lowerCase = window.confirm("Do you want lowercase letters in your password? Click `OK` to confirm, `CANCEL` to deny.")
+  //This is the lowercase option
+  var lowerCase = window.confirm("Do you want lowercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
 
 
-
-  var upperCase = window.confirm("Do you want uppercase letters in your password? Click `OK` to confirm, `CANCEL` to deny.")
-
-
-
-  var numbers = window.confirm("Do you want numbers in your password? Click `OK` to confirm, `CANCEL` to deny.")
+  //This is the uppercase option
+  var upperCase = window.confirm("Do you want uppercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
 
 
+  //This is the number option
+  var numbers = window.confirm("Do you want numbers in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
 
-  var specialCharacters = window.confirm("Do you want special characters in your password? Click `OK` to confirm, `CANCEL` to deny.")
+
+  //This is the special character option
+  var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.")
 
 
 }
