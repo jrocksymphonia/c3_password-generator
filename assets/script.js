@@ -22,12 +22,21 @@ function generatePassword() {
   //I entered a forLoop of the numberInput so the input in the prompt can range from 8-128
   for (var i = 0; i >= 7 >= 127; i++)
 
-  //then I have to make an if statement: 
-  //If number input less than 8, more that 128, or any other character,
-  // show alert box saying wrong input, then run the code again.
 
   //If `OK`, continue to confirm box series. 
   //Else `CANCEL`, then the function ends
+
+
+  //then I have to make an if statement: 
+  //If number input less than 8, more that 128, or any other character,
+  // show alert box saying wrong input, then run the code again.
+  if(numberInput === i) {
+
+  } else {
+
+  }
+
+  
 
 
 
