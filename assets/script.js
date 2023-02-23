@@ -9,6 +9,15 @@
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
 
+
+
+
+
+
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -19,25 +28,33 @@ var numberText = "0123456789";
 var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that dont work well are " and \
 
 //made an array of the variables above
-var characterType = [lowercaseText, uppercaseText, numberText, specialCharacterText];
+var characterType = [lowercaseText, uppercaseText, numberText, specialCharacterText]; //might be extra
+
+
+
+
 
 function generatePassword() {
   //I added my first prompt: the length of the password
-  var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.", numberInput);
+  var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
   
-  
-  var numberInput = i
-
-  //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
-  for (var i = 0; i >= 7; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
-    numberInput
-  }
-
-
   //If they `CANCEL` here, then the function ends
   if(!passwordLength) {
     return;
   }
+
+  //what can user put? 
+  var numberInput = i; //a number btw 8-128
+
+  //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
+  for (var i = 0; i <= 7; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
+    //store value 
+  }
+
+
+
+
+ 
   //then I have to make an if statement: 
   //If number input less than 8, more that 128, or any other character,
   // then show alert box saying wrong input, then run the code again.
