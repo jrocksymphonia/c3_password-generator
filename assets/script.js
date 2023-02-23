@@ -26,7 +26,7 @@ function generatePassword() {
   var numberInput = i
 
   //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
-  for (var i = 0; i >= 7; i++)
+  for (var i = 0; i >= 7; i++) //OMG I NEVER COMPLETED THE forLoop LOL
 
 
   //If they `CANCEL` here, then the function ends
