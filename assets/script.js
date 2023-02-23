@@ -43,16 +43,11 @@ function generatePassword() {
     return;
   }
 
-  //what can user put? 
-  var numberInput = i; //a number btw 8-128
 
   //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
-  for (var i = 0; i <= 7; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
-    //store value 
-  }
-
-
-
+  for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
+    passwordLength = i //a number btw 8-128
+  } 
 
  
   //then I have to make an if statement: 
@@ -66,25 +61,42 @@ function generatePassword() {
   
 
 
-
   //My next couple messsages are going to be confirm boxes
   //This is the lowercase option
   var lowerCase = window.confirm("Do you want lowercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
-
+  //if user hits `OK`, it acceses string of lowercase letters
+  if (lowerCase) {
+    lowercaseText
+  }
 
   //This is the uppercase option
   var upperCase = window.confirm("Do you want uppercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
+  //if user hits `OK`, it acceses string of uppercase letters
+  if (upperCase) {
+    uppercaseText
+  }
 
   //This is the number option
   var numbers = window.confirm("Do you want numbers in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
+  //if user hits `OK`, it acceses string of numbers
+  if (numbers) {
+    numbersText
+  }
 
   //This is the special character option
   var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
+  
+  //if user hits `OK`, it acceses string of special characters
+  if (specialCharacters) {
+    specialCharacterText
+  }
 
 
+  //computer magic:
+  
 
   //Answer options:
   // out of 120 character lengths, you get 14 options for each length
