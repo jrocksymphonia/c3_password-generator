@@ -9,11 +9,7 @@
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
 
-
-
-
-
-
+//-------------------------------------------------------------------------------------------------------
 
 
 //characters that the computer can choose from
@@ -22,11 +18,10 @@ var uppercaseText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberText = "0123456789";
 var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that dont work well are " and \
 
-  //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
-  for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
-   //a number btw 8-128
-  } 
-
+//The password length options 8-128
+for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
+  //a number btw 8-128
+} 
 
 //made an array of the variables above
 var characterType = [lowercaseText, uppercaseText, numberText, specialCharacterText]; //might be extra
@@ -38,26 +33,26 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   //I added my first prompt: the length of the password
   var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
-  
-  //If they `CANCEL` here, then the function ends
-  if(!passwordLength) {
-    return;
+
+  //The idea is that they must choose a number between 8-128. 
+  // If number input less than 8, more that 128, or any other character,
+  // then an alert box shows up saying wrong input, then run the prompt runs again.
+
+  if(passwordLength < 8){
+    window.alert("You must enter a number between 8 and 128");
+    window.prompt("Set character length of password. It can be 8-128 characters long.");
+  }else if(passwordLength > 128){
+    window.alert("You must enter a number between 8 and 128");
+    window.prompt("Set character length of password. It can be 8-128 characters long.");
+  }else if (isNaN(passwordLength)){
+    window.alert("You must enter a number between 8 and 128");
+    window.prompt("Set character length of password. It can be 8-128 characters long.");
   }
-
-
-
-
- 
-  //then I have to make an if statement: 
-  //If number input less than 8, more that 128, or any other character,
-  // then show alert box saying wrong input, then run the code again.
-  // if (!numberInput) {
-  //   window.alert("You must enter a number between 8 and 128");
-  //   passwordLength
-  // }
-
   
-
+  //If they `CANCEL` here, then the function ends and returns as empty string
+  if(!passwordLength) {
+    return ("");
+  }
 
   //My next couple messsages are going to be confirm boxes
   //This is the lowercase option
@@ -66,7 +61,11 @@ function generatePassword() {
   //if user hits `OK`, it acceses string of lowercase letters
   if (lowerCase) {
     lowercaseText
+  }else{
+    !lowercaseText
   }
+
+  return
 
   //This is the uppercase option
   var upperCase = window.confirm("Do you want uppercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
@@ -74,6 +73,8 @@ function generatePassword() {
   //if user hits `OK`, it acceses string of uppercase letters
   if (upperCase) {
     uppercaseText
+  }else{
+    !uppercaseText
   }
 
   //This is the number option
@@ -87,10 +88,10 @@ function generatePassword() {
   //This is the special character option
   var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
   
-  //if user hits `OK`, it acceses string of special characters
-  if (specialCharacters) {
-    specialCharacterText
-  }
+  // //if user hits `OK`, it acceses string of special characters
+  // if (specialCharacters) {
+  //   specialCharacterText
+  // }
 
 
   //computer magic:
