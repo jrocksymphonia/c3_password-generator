@@ -24,9 +24,7 @@ var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that 
 
   //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
   for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
-    
-    
-    // passwordLength = i //a number btw 8-128
+   //a number btw 8-128
   } 
 
 
@@ -42,9 +40,7 @@ function generatePassword() {
   var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
   
   //If they `CANCEL` here, then the function ends
-  if(passwordLength) {
-    
-  }else{
+  if(!passwordLength) {
     return;
   }
 
