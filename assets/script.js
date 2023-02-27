@@ -19,8 +19,21 @@ var numberText = "0123456789";
 var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that dont work well are " and \
 
 
-//made an array of the variables above
-var characterType = [lowercaseText, uppercaseText, numberText, specialCharacterText]; //might be extra
+//made an array of functions that randomize the variables above
+var characterType = [
+  function lowercaseText(){
+    return lowercaseText[Math.floor(Math.random() * lowercaseText.length)];
+  }, 
+  function uppercaseText(){
+    return uppercaseText[Math.floor(Math.random() * uppercaseText.length)];
+  },
+  function numberText(){
+    return numberText[Math.floor(Math.random() * numberText.length)];
+  },
+  function specialCharacterText(){
+    return specialCharacterText[Math.floor(Math.random() * specialCharacterText.length)];
+  }
+]; 
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -43,6 +56,8 @@ function generatePassword() {
     window.alert("You must enter a number between 8 and 128");
     window.prompt("Set character length of password. It can be 8-128 characters long.");
   }
+
+  window.alert(passwordLength);
   
   //If they `CANCEL` here, then the function ends and returns as empty string
   if(!passwordLength) {
@@ -53,9 +68,11 @@ function generatePassword() {
   //This is the lowercase option
   var lowerCase = window.confirm("Do you want lowercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
 
+  window.alert(lowerCase)
+
   //if user hits `OK`, it acceses string of lowercase letters
   if (lowerCase) {
-    lowercaseText
+    lowercaseText;
   }else{
     !lowercaseText
   }
@@ -89,11 +106,22 @@ function generatePassword() {
   }
   //computer magic:
   
-  //The password length options 8-128
+  // //The password length options 8-128
   for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
-    //password lengths between 8-128
-    console.log(i);
+   if (lowerCase){
+      //generate password
+   }else if(lowerCase && upperCase){
+      //generate password
+   }else if(lowerCase && upperCase && numbers){
+      //generate password
+   }else if(lowerCase && upperCase && numbers && specialCharacters){
+      //generate password
+   }
   } 
+
+  // if ((passwordLength === 8) && ){
+
+  // }
 
   //Answer options:
   // out of 120 character lengths, you get 14 options for each length
