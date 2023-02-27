@@ -18,10 +18,6 @@ var uppercaseText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberText = "0123456789";
 var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that dont work well are " and \
 
-//The password length options 8-128
-for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
-  //a number btw 8-128
-} 
 
 //made an array of the variables above
 var characterType = [lowercaseText, uppercaseText, numberText, specialCharacterText]; //might be extra
@@ -35,9 +31,8 @@ function generatePassword() {
   var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
 
   //The idea is that they must choose a number between 8-128. 
-  // If number input less than 8, more that 128, or any other character,
+  // If number input less than 8, more that 128, or any other character that's not a number,
   // then an alert box shows up saying wrong input, then run the prompt runs again.
-
   if(passwordLength < 8){
     window.alert("You must enter a number between 8 and 128");
     window.prompt("Set character length of password. It can be 8-128 characters long.");
@@ -65,7 +60,7 @@ function generatePassword() {
     !lowercaseText
   }
 
-  return
+  
 
   //This is the uppercase option
   var upperCase = window.confirm("Do you want uppercase letters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
@@ -88,14 +83,17 @@ function generatePassword() {
   //This is the special character option
   var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
   
-  // //if user hits `OK`, it acceses string of special characters
-  // if (specialCharacters) {
-  //   specialCharacterText
-  // }
-
-
+  //if user hits `OK`, it acceses string of special characters
+  if (specialCharacters) {
+    specialCharacterText
+  }
   //computer magic:
   
+  //The password length options 8-128
+  for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
+    //password lengths between 8-128
+    console.log(i);
+  } 
 
   //Answer options:
   // out of 120 character lengths, you get 14 options for each length
