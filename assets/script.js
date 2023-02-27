@@ -16,22 +16,25 @@
 
 
 
-
-
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
 //characters that the computer can choose from
 var lowercaseText = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberText = "0123456789";
 var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that dont work well are " and \
 
+  //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
+  for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
+    
+    
+    // passwordLength = i //a number btw 8-128
+  } 
+
+
 //made an array of the variables above
 var characterType = [lowercaseText, uppercaseText, numberText, specialCharacterText]; //might be extra
 
-
-
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
 
 function generatePassword() {
@@ -39,15 +42,14 @@ function generatePassword() {
   var passwordLength = window.prompt("Set character length of password. It can be 8-128 characters long.");
   
   //If they `CANCEL` here, then the function ends
-  if(!passwordLength) {
+  if(passwordLength) {
+    
+  }else{
     return;
   }
 
 
-  //I entered a forLoop of the numberInput options so the input in the prompt can range from 8-128
-  for (var i = 8; i <= 128; i++) { //OMG I NEVER COMPLETED THE forLoop LOL
-    passwordLength = i //a number btw 8-128
-  } 
+
 
  
   //then I have to make an if statement: 
