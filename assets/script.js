@@ -89,7 +89,7 @@ function generatePassword() {
 
   //computer magic:
   
-  //The password length options 8-128
+  //
   let password = "";
   while (passwordLength > password.length) { 
     keyToAdd = Math.floor(Math.random() * 3);
