@@ -1,7 +1,7 @@
 # password-generator_c3
 
 ## Description
-This project is intended to help my client ). .  
+This project is intended to help my client create a strong password using the criteria given that they enter a character length between 8-128 characters and their choice of having lowercase, uppercase, numbers, and special characters. 
 
 ## Installation
 
@@ -9,7 +9,18 @@ N/A
 
 ## Usage
 
-Open Google Chrome DevTools or any other code inspection tool on your default browser to view the HTML setup. Check out the title elements and the alt attributes in the image elements for the updated and improved descriptions. Scroll through the fully organized CSS and see how each selector can be easily traced back to its HTML element just by organization alone.
+![setting character length](./assets/screenshots/setcharlength.png)
+
+![asking for lower case](./assets/screenshots/lowerCase.png)
+
+![asking for upper case](./assets/screenshots/upperCase.png)
+
+![asking for numbers](./assets/screenshots/numbaaasss.png)
+
+![asking for special characters](./assets/screenshots/specialCharacterz.png)
+
+![The result](./assets/screenshots/zaResult.png)
+
 
 ## Credits
 links gathered:
