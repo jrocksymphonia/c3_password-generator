@@ -89,7 +89,7 @@ function generatePassword() {
 
   //computer magic:
   
-  //
+  //creating the randomization to generate the password
   let password = "";
   while (passwordLength > password.length) { 
     keyToAdd = Math.floor(Math.random() * 3);
