@@ -21,6 +21,9 @@ N/A
 
 ![The result](./assets/screenshots/zaResult.png)
 
+Link to live website:
+https://jrocksymphonia.github.io/password-generator_c3/
+
 
 ## Credits
 links gathered:
