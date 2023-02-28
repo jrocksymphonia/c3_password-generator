@@ -1,39 +1,28 @@
-
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-
-  // WHEN prompted for the length of the password
-  // THEN I choose a length of at least 8 characters and no more than 128 characters
-
-  // WHEN asked for character types to include in the password
-  // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-
-
-//-------------------------------------------------------------------------------------------------------
-
-
 //characters that the computer can choose from
 var lowercaseText = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberText = "0123456789";
 var specialCharacterText = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //characters that dont work well are " and \
 
+let keyToAdd = 0
 
-//made an array of functions that randomize the variables above
-var characterType = [
-  function lowercaseText(){
-    return lowercaseText[Math.floor(Math.random() * lowercaseText.length)];
-  }, 
-  function uppercaseText(){
-    return uppercaseText[Math.floor(Math.random() * uppercaseText.length)];
-  },
-  function numberText(){
-    return numberText[Math.floor(Math.random() * numberText.length)];
-  },
-  function specialCharacterText(){
-    return specialCharacterText[Math.floor(Math.random() * specialCharacterText.length)];
-  }
-]; 
+//made functions that randomize the variables above
+
+function lowercaseText(){
+  return lowercaseText[Math.floor(Math.random() * lowercaseText.length)];
+}
+
+function uppercaseText(){
+  return uppercaseText[Math.floor(Math.random() * uppercaseText.length)];
+}
+
+function numberText(){
+  return numberText[Math.floor(Math.random() * numberText.length)];
+}
+
+function specialCharacterText(){
+  return specialCharacterText[Math.floor(Math.random() * specialCharacterText.length)];
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -56,8 +45,6 @@ function generatePassword() {
     window.alert("You must enter a number between 8 and 128");
     window.prompt("Set character length of password. It can be 8-128 characters long.");
   }
-
-  window.alert(passwordLength);
   
   //If they `CANCEL` here, then the function ends and returns as empty string
   if(!passwordLength) {
@@ -77,6 +64,22 @@ function generatePassword() {
   //This is the special character option
   var specialCharacters = window.confirm("Do you want special characters in your password? \nClick `OK` to confirm, `CANCEL` to deny.");
   
+  var userAnswer = []
+  if (lowerCase){
+    userAnswer.push(0)
+  }
+
+  if (upperCase){
+    userAnswer.push(1)
+  }
+
+  if (numbers){
+    userAnswer.push(2)
+  }
+
+  if (specialCharacters){
+    userAnswer.push(3)
+  }
 
   //if the user doesn't select any of the options, alert the user and end the function
   if (lowerCase + upperCase + numbers + specialCharacters === 0){
@@ -85,50 +88,25 @@ function generatePassword() {
   }
 
   //computer magic:
-
   
   //The password length options 8-128
   let password = "";
   while (passwordLength > password.length) { 
-    password = password + "a";
-    let keyToAdd = characterType[Math.floor(Math.random() * characterType.length)];
+    keyToAdd = Math.floor(Math.random() * 3);
+    if (keyToAdd in userAnswer){
+      if (keyToAdd === 0){
+        password += lowercaseText[Math.floor(Math.random() * lowercaseText.length)];
+      }else if (keyToAdd === 1) {
+        password += uppercaseText[Math.floor(Math.random() * uppercaseText.length)];
+      }else if (keyToAdd === 2) {
+        password += numberText[Math.floor(Math.random() * numberText.length)];
+      }else if (keyToAdd === 3) {
+        password += specialCharacterText[Math.floor(Math.random() * specialCharacterText.length)];
+      }
+    }
+    
   } 
-
-  //var i = 8; i <= 128; i++
-    //OMG I NEVER COMPLETED THE forLoop LOL
-    //  if (lowerCase){
-    //     //generate password
-    //  }else if(lowerCase && upperCase){
-    //     //generate password
-    //  }else if(lowerCase && upperCase && numbers){
-    //     //generate password
-    //  }else if(lowerCase && upperCase && numbers && specialCharacters){
-    //     //generate password
-    //  }
-  //Answer options:
-  // out of 120 character lengths, you get 14 options for each length
-  //(lowercase = LC, uppercase = UC, number = N, special characters = SC):
-  //if user only chooses 1 of 4 options:
-  // -LC 
-  // -UC
-  // -N
-  // -SC
-
-  //if user chooses 2 of 4 options:
-  // -LC + UC
-  // -LC + N
-  // -LC + SC
-  // -UC + N
-  // -UC + SC
-  // -N + SC
-
-  //if user chooses 3 of 4 options:
-  // -LC + UC + N
-  // -LC + N + SC
-  // -UC + N + SC
-
-  //if user chooses 4 of 4 options:
-  // -LC + UC + N + SC
+  return password
 }
 
 // (2nd function) Write password to the #password input 
@@ -142,23 +120,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//----------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
